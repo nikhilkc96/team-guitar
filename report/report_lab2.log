@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.6)  28 NOV 2020 16:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.6)  28 NOV 2020 20:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1086,11 +1086,11 @@ See the caption package documentation for explanation.
 
 [3] (./report_lab2.aux) ) 
 Here is how much of TeX's memory you used:
- 26425 strings out of 480608
- 654891 string characters out of 5903630
+ 26427 strings out of 480608
+ 654912 string characters out of 5903630
  1015737 words of memory out of 5000000
- 41919 multiletter control sequences out of 15000+600000
- 536170 words of font info for 37 fonts, out of 8000000 for 9000
+ 41920 multiletter control sequences out of 15000+600000
+ 536516 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,6n,98p,938b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2020/texmf-dist/fonts/type1/public
@@ -1098,12 +1098,13 @@ Here is how much of TeX's memory you used:
 amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmti12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmtt10.pfb>
-Output written on report_lab2.pdf (4 pages, 228172 bytes).
+onts/cm/cmti10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmti12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmtt10.pfb>
+Output written on report_lab2.pdf (4 pages, 238557 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
- 32 compressed objects within 1 object stream
+ 55 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
