@@ -1,0 +1,16 @@
+[[package]]
+category = "main"
+description = "Simple construction, analysis and modification of binary data."
+name = "bitstring"
+optional = false
+python-versions = "*"
+version = "3.1.7"
+
+[metadata]
+content-hash = "45ee370facd78b777f4d1050592d2630a6736b8388403384b566422793420b78"
+python-versions = "^3.8"
+
+[metadata.files]
+bitstring = [
+    {file = "bitstring-3.1.7.tar.gz", hash = "sha256:fdf3eb72b229d2864fb507f8f42b1b2c57af7ce5fec035972f9566de440a864a"},
+]
