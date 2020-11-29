@@ -68,7 +68,7 @@ evaluation}}\\
 \setcounter{page}{1}
 \pagenumbering{arabic}
 \chapter*{Solution}
-\par Our solution to laboratory 2 is entirely implemented using Python. Specifically, we made use of the {\tt NumPy} library to easily manipulate vectors and quickly compute operations between them. The solution is composed of 8 Python source files: {\tt main.py} contains all the function for tasks, {\tt task1.py} contains functions necessary to carry out the implement the wiretap channel, so that it accepts an
+\par Our solution to laboratory 2 is entirely implemented using Python. Specifically, we made use of the {\tt NumPy} library to easily manipulate vectors and quickly compute operations between them. The solution is composed of 7 Python source files: {\tt task1.py} contains functions necessary to carry out the implement the wiretap channel, so that it accepts an
 input  and produces the corresponding pair of outputs (y; z), {\tt task2.py} contains random encoder function to implement the random binning encoder, so that it accepts an input and produces the corresponding output, {\tt task3.py} contain random decoder function to implement the legitimate decoder, so that it accepts an input and produces the corresponding output,  {\tt task4.py} contains the functions implement the encoder + eavesdropper channel, {\tt task5.py}  contains function to implement the wiretap BSC, {\tt task6.py} contains functions for repeat the simulations in Tasks 3-4 with the wiretap BSC, evaluate the resulting reliability in terms of Bob's error rate on the secret message chain P, evaluate the resulting the secrecy in terms of leaked information to Eve on the secret message I and compute an upper bound to the mechanism security in terms of distinguishability from the ideal
 counterpart and {\tt utils.py} contains function to convert the string to array and the array to string. 
  \section*{Task 1}
@@ -102,13 +102,19 @@ the estimates of H(u), and I(u; z)\hfill \break \linebreak
   \includegraphics[width=10cm,height=1cm]{2.3.3}
 
 \section*{Considerations and remarks}
-1) How many secret message bits per channel use ("transmitted word") have you obtained with yourscheme?How many secret bits per binary digit ("transmitted bit")?  \hfill \break \linebreak
+1) How many secret message bits per channel use ("transmitted word") have you obtained with your
+scheme?
+How many secret bits per binary digit ("transmitted bit")?  \hfill \break \linebreak
 Because the legitimate channel introduce at most 1 error and we can always detect it and find the correct input. the eve channel can generate at most 3 errors, he wont understand which bit was ‘flipped’. \hfill \break  \linebreak
-2) Is it possible to obtain 4 secret bits per channel use?If so, how should you change your encoder/decoder? If not, why? \hfill \break \linebreak
+2) Is it possible to obtain 4 secret bits per channel use?
+If so, how should you change your encoder/decoder? If not, why? \hfill \break \linebreak
 No, we cannot have more secrets bits than we have sent as input \hfill \break \linebreak
-3) Is it possible to obtain 2 secret bits per channel use?If so, how should you change your encoder\/decoder? If not, why?  \hfill \break \linebreak
+3) Is it possible to obtain 2 secret bits per channel use?
+If so, how should you change your encoder\/decoder? If not, why?  \hfill \break \linebreak
 Yes because at most we have 3 secure bits (upper-bound), maybe having a deterministic encoder\/decoder\hfill \break \linebreak
-4)One could consider evaluating the secrecy of this mechanism by cascading the eavesdropper channelwith a decoder and measuring the resulting error rates. What do you expect Eve's error would be?Why resort to (more complicated) evaluating the mutual information? \hfill \break \linebreak
+4)One could consider evaluating the secrecy of this mechanism by cascading the eavesdropper channel
+with a decoder and measuring the resulting error rates. What do you expect Eve's error would be?
+Why resort to (more complicated) evaluating the mutual information? \hfill \break \linebreak
 Since Eve cannot know which bits are flipped, we suppose that Eve has to choose randomly among all possibility (1\//2\^3). So the error is 1-1\//2\^3
 \section*{Task 5}
 Task 5 is a binary symmetric channel that flips bits in bob and eve channels with probability epsilon and delta. The bits to flip are chosen uniformly in the input with a simple random generation of 0 and 1, where 1 means that a flip will occur in that position. This mask is applied with a XOR.
@@ -130,7 +136,9 @@ It is instead exactly 0 with epsilon equals to 0 or 1 because in this case we ar
 A plot of the error decoding probability P as a function of \textepsilon \space for the BSC
 \includegraphics[width=10cm,height=7cm]{10} \hfill \break \linebreak
 A plot of the mutual information I as a function of \textepsilon \space for the BSC
-\includegraphics[width=10cm,height=7cm]{11}
+\includegraphics[width=10cm,height=7cm]{11} \hfill \break \linebreak
+For point 1.3.6 we need this formula: \hfill \break \linebreak
+\includegraphics[width=10cm,height=5cm]{12}
 
 \end{document}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.6)  29 NOV 2020 23:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.11.6)  29 NOV 2020 23:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1138,33 +1138,38 @@ File: ./images/11.jpg Graphic file (type jpg)
 <use ./images/11.jpg>
 Package pdftex.def Info: ./images/11.jpg  used on input line 139.
 (pdftex.def)             Requested size: 284.54124pt x 199.16722pt.
- [6 <./images/5.png> <./images/6.png>]
+<./images/12.jpg, id=45, 1424.32124pt x 637.38126pt>
+File: ./images/12.jpg Graphic file (type jpg)
+<use ./images/12.jpg>
+Package pdftex.def Info: ./images/12.jpg  used on input line 141.
+(pdftex.def)             Requested size: 284.51147pt x 142.25696pt.
+ [6 <./images/5.png> <./images/6.png>] [7 <./images/10.jpg>]
 
 Package caption Warning: Unused \captionsetup[table] on input line 15.
 See the caption package documentation for explanation.
 
-[7 <./images/10.jpg>] [8 <./images/11.jpg>] (./report_lab2.aux) ) 
+[8 <./images/11.jpg> <./images/12.jpg>] (./report_lab2.aux) ) 
 Here is how much of TeX's memory you used:
- 26518 strings out of 480608
- 655975 string characters out of 5903630
+ 26526 strings out of 480608
+ 656078 string characters out of 5903630
  1017737 words of memory out of 5000000
- 41999 multiletter control sequences out of 15000+600000
+ 42007 multiletter control sequences out of 15000+600000
  537200 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,6n,98p,938b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/te
-xlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/tex
-live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/tex
-live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
-ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive
-/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/
-2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2
-020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/20
-20/texmf-dist/fonts/type1/public/cbfonts/grmn1000.pfb>
-Output written on report_lab2.pdf (9 pages, 483494 bytes).
+</usr/local/texliv
+e/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2
+020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/202
+0/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2020/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/t
+exmf-dist/fonts/type1/public/cbfonts/grmn1000.pfb>
+Output written on report_lab2.pdf (9 pages, 574224 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
+ 86 PDF objects out of 1000 (max. 8388607)
  50 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 78 words of extra memory for PDF output out of 10000 (max. 10000000)
 
