@@ -3,6 +3,7 @@ from bitstring import BitArray
 from collections import Counter
 import matplotlib.pyplot as plt
 import matplotlib.pyplot as plt2
+import matplotlib.pyplot as plt3
 
 def legittimate_channel(x):
     # Legitimate
@@ -79,6 +80,13 @@ def main():
   plt2.ylabel('Times')
   plt2.suptitle('Simulation of Eavesdropper channel')
   plt2.show()
+
+  plt3.scatter(list(sorted(z_dict.keys())), list(x / n for x in z_dict.values()), color="black")
+  plt3.xlabel('Numbers received by Eavesdropper')
+  plt3.ylabel('p_(z|x)(·|1001000)')
+  plt3.suptitle('plot of the conditional pmd p_(z|x)(·|1001000) for Eavesdropper channel')
+  plt3.axis([0. ,128., 0., 0.2])
+  plt3.show()
 
 if __name__ == "__main__":
   main()
