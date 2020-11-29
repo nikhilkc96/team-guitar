@@ -107,12 +107,10 @@ Because the legitimate channel introduce at most 1 error and we can always detec
 2) Is it possible to obtain 4 secret bits per channel use?If so, how should you change your encoder/decoder? If not, why? \hfill \break \linebreak
 No, we cannot have more secrets bits than we have sent as input \hfill \break \linebreak
 3) Is it possible to obtain 2 secret bits per channel use?If so, how should you change your encoder\/decoder? If not, why?  \hfill \break \linebreak
-Yes because at most we have 3 secure bits (upper-bound), maybe having a deterministic encoder\/decoder? (don't know)\hfill \break \linebreak
+Yes because at most we have 3 secure bits (upper-bound), maybe having a deterministic encoder\/decoder\hfill \break \linebreak
 4)One could consider evaluating the secrecy of this mechanism by cascading the eavesdropper channelwith a decoder and measuring the resulting error rates. What do you expect Eve's error would be?Why resort to (more complicated) evaluating the mutual information? \hfill \break \linebreak
 Since Eve cannot know which bits are flipped, we suppose that Eve has to choose randomly among all possibility (1\//2\^3). So the error is 1-1\//2\^3
 \section*{Task 5}
-In task 5 we are using NumPy, bitstring, utils for string to array and array to string, math, matplotlib for plot and statistics libraries for better implementation and we import the task2 and task3 to connected in between the random binning encoder developed in Task 2, and the decoder
-developed in Task 3, for test with task 2/3 encoder decoder we defined deltas as np.arange(0, 1.1, 0.1), epsilon  as 0.1, wrong\_eves to store number of wrong codewords decoded by eve in percentage, wrong\_bobs to store number of wrong codewords decoded by bob in percentage, codeword\_error\_eve for \% of wrong bits in the codeword received by eve after we compute the channel capacity then we defined     multi\_error\_codeword\_count to count how many pairs of codewords (x, y)have more than 1 bit different, error\_bob\_count for wrong codewords decoded by bob and this is not the same as multi\_error\_codeword\_count, because the complementary (+- 1 bit) of the codewords are decoded correctly, error\_eve\_count for wrong codewords decoded by eve and codeword\_error\_eve\_cycle to count how many flipped bits are in the codeword received by eve at each cycle after that repeat multiple times for better estimates then compare decode with input.\hfill \break \linebreak
 Task 5 is a binary symmetric channel that flips bits in bob and eve channels with probability epsilon and delta. The bits to flip are chosen uniformly in the input with a simple random generation of 0 and 1, where 1 means that a flip will occur in that position. This mask is applied with a XOR.
 The channel is tested first with a long string of bits and the number of flipped bits equals in percentage the values provided for epsilon and delta.
 Then the full range of inputs for the encoder and decoder of task 2 and 3 is tested multiple times and the results are averaged for better accuracy.
@@ -129,8 +127,7 @@ Similarly to the plot for task5, bob's error probability that it decodes a wrong
 Note that the error probability does not reach 1 because we need to account for the probability that 0 or only 1 bits are flipped in the whole codeword even when epsilon equals 0.5, and thus it is still decoded correctly.
 It is instead exactly 0 with epsilon equals to 0 or 1 because in this case we are sure no bits (or all in the case epsilon equals 1) are flipped and computations are repeated to increase accuracy also here.
 \hfill \break \linebreak
-
-a plot of the error decoding probability P as a function of \textepsilon \space for the BSC
+A plot of the error decoding probability P as a function of \textepsilon \space for the BSC
 \includegraphics[width=10cm,height=7cm]{10}
 
 
