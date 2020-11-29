@@ -93,7 +93,9 @@ In task we are using the {\tt Numpy} and {\tt BitArray} for array operations {\t
 first 4 rows form the identity matrix 4x4 and {\textit H} is the parity check matrix built starting from G last 3 rows of G + Identity 3x3 {\textit coset\_leader} look-up table for choosing the coset leader of the syndrome computed in a paper using H and all of possible choices of 3 bits [x x x], {\textit inputs} is all of possible inputs, and {\tt rand\_decoder(y\_string)} is function for implement the legitimate decoder, so that it accepts an
 input and produces the corresponding output.
 \section*{Task 4}
-Here in task 4 the 
+Here in task 4 the tasks are divided into two parts first part we are using 8X128 matrix to collect the statistics of PDM , pz|u after that we are running simulations by sending the message through the eavesdropper branch of the channel and thereby collecting the distribution  pz|u, then we will plot the result with the Number as x and Probability as y axis using z\_pmds[i], Here the message(u) is not taken randomly so we are estimating the distribution pz|u. \hfill \break \linebreak
+ \includegraphics[width=10cm,height=7cm]{3}  \hfill \break \linebreak
+In the second part ,we are running some simulations  by taking a random message and observe the  z received by the eavesdropper. Here both u and z are random variables.Then we collect the distribution pu|z .After that we compute the marginal distribution, entropies and the mutual information and we use the help function to compute the following rand\_encoder(), eve\_channel().
 \section*{Task 5}
 
 \section*{Task 6}
