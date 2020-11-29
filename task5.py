@@ -8,7 +8,9 @@ import matplotlib.pyplot as plt
 from statistics import mean
 import matplotlib.pyplot as plt2
 
+# I suggest piping the stdout to a file
 def main():
+  print("\nSTARTING TASK 5\n")
   rng = np.random.default_rng()
   # random input with equal number of 0 and 1
   input = rng.choice([0,1], 10000, p=[0.5, 0.5])
@@ -19,7 +21,7 @@ def main():
   error_y = sum(abs(input - output_y))/np.size(input)
   error_z = sum(abs(input - output_z))/np.size(input)
   print("Provided values are: epsilon = " + str(epsilon) + " delta = " + str(delta))
-  print("Computed values after test are: epsilon = " + str(error_y) + " delta = " + str(error_z))
+  print("Computed values after test are: epsilon = " + "{:.2f}".format(error_y) + " delta = " + "{:.2f}".format(error_z))
 
   # test with task 2/3 encoder decoder
   print("TESTING WITH ENCODER/DECODER")
@@ -39,15 +41,15 @@ def main():
     else:
       capacity = 0
 
-    print("With epsilon = ", str(epsilon), " and delta = ", str(delta), " the channel capacity is ", str(capacity))
+    print("With epsilon = ", "{:.2f}".format(epsilon), " and delta = ", "{:.2f}".format(delta), " the channel capacity is ", "{:.2f}".format(capacity))
 
-    # count of how many pairs of codewords have more than 1 bit different, or in other words, how many wrong codewords are decoded
-    multi_error_codeword_count = 0 
-    error_bob_count = 0 # this is the same as multi_error_codeword_count, kept for redundancy
+    multi_error_codeword_count = 0 # count how many pairs of codewords (x, y)have more than 1 bit different
+    # wrong codewords decoded by bob 
+    error_bob_count = 0 # this is not the same as multi_error_codeword_count, because the complementary (+- 1 bit) of the codewords are decoded correctly
     error_eve_count = 0 # wrong codewords decoded by eve 
-    codeword_error_eve_cycle = []
+    codeword_error_eve_cycle = [] # count how many flipped bits are in the codeword received by eve at each cycle
     
-    repeat = 100 # how many times to repeat input sequences
+    repeat = 50 # how many times to repeat input sequences
   
     # repeat multiple times for better estimates
     for u in np.repeat(t3.inputs, repeat):
@@ -81,30 +83,31 @@ def main():
       
     wrong_bob = error_bob_count/len(t3.inputs)/repeat
     wrong_bobs.append(wrong_bob)
-    print("Codewords wrongly decoded by bob: ", str(wrong_bob), "%")
+    print("Codewords wrongly decoded by bob: ", "{:.2f}".format(wrong_bob*100), "%")
     
-    if multi_error_codeword_count > 0:
+    if wrong_bob > 0: # use multi_error_codeword_count if you want also the complementary cases
       print("Perfect reliability is violated!")
 
     codeword_error_eve.append(mean(codeword_error_eve_cycle))
     
     wrong_eve = error_eve_count/len(t3.inputs)/repeat
     wrong_eves.append(wrong_eve)
-    print("Codewords wrongly decoded by eve: ", str(wrong_eve), "%")
-    print("#"*20)
+    print("Codewords wrongly decoded by eve: ", "{:.2f}".format(wrong_eve*100), "%")
+    print("#"*100)
   
   # plot message error
-  plt.plot(deltas, wrong_eves, color="red")
-  plt.xlabel('Delta')
-  plt.ylabel('Error')
-  plt.suptitle('Error probability of eve decode')
-  plt.show()
+  if (False):
+    plt.plot(deltas, wrong_eves, color="red")
+    plt.xlabel('Delta')
+    plt.ylabel('Error')
+    plt.suptitle('Error probability of eve decode')
+    plt.show()
 
-  plt2.plot(deltas, codeword_error_eve, color="blue")
-  plt2.xlabel('Delta')
-  plt2.ylabel('Error')
-  plt2.suptitle('Error probability of eve codeword')
-  plt2.show()
+    plt2.plot(deltas, codeword_error_eve, color="blue")
+    plt2.xlabel('Delta')
+    plt2.ylabel('Error')
+    plt2.suptitle('Error probability of eve codeword')
+    plt2.show()
   
 
 def bsc_channel(input, e, d):
