@@ -38,7 +38,7 @@ if __name__ == "__main__":
         print("Errors rate (e,d)=(",e, ",",d, "): ", errors/len(inputs))
 
     d=0.0
-    while (d<=0.05):
+    while (d<=1):
         n = 10000
         z_pmds = []
         for u in inputs:
