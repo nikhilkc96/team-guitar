@@ -85,7 +85,9 @@ counterpart and {\tt utils.py} contains function to convert the string to array 
   \linebreak And we iterated our algorithm 25 000 times and we get this output.\hfill \break
    \includegraphics[width=13cm,height=2cm]{output2} \hfill \break
   \includegraphics[width=10cm,height=7cm]{1} \linebreak
- \includegraphics[width=10cm,height=7cm]{2}
+ \includegraphics[width=10cm,height=7cm]{2}  \linebreak
+  \includegraphics[width=10cm,height=7cm]{8}
+
   \section*{Task 2}
   In task 2 we are using the random lib for Generate pseudo-random numbers and BitArray lib for efficient arrays of booleans for better implementation, we defined X array variable for storing the codewords, and {\tt rand\_encoder(d)} function for Implement the random binning encoder, first we checks which codeword starts with the prefix and gets it and Calculates the complement of the binary given as input and the codeword x is chosen randomly and uniformly within the bin associated to the message u, to optimise the code we could compute the complement if, and only if, the rand == 1, in this i preferred to show the two choices and how the randomness choice it.
 \section*{Task 3}
@@ -96,6 +98,8 @@ input and produces the corresponding output.
 Here in task 4 the tasks are divided into two parts first part we are using 8X128 matrix to collect the statistics of PDM , pz|u after that we are running simulations by sending the message through the eavesdropper branch of the channel and thereby collecting the distribution  pz|u, then we will plot the result with the Number as x and Probability as y axis using z\_pmds[i], Here the message(u) is not taken randomly so we are estimating the distribution pz|u. \hfill \break \linebreak
  \includegraphics[width=10cm,height=7cm]{4}  \hfill \break \linebreak
 In the second part ,we are running some simulations  by taking a random message and observe the  z received by the eavesdropper. Here both u and z are random variables.Then we collect the distribution pu|z .After that we compute the marginal distribution, entropies and the mutual information and we use the help function to compute the following rand\_encoder(), eve\_channel().
+the estimates of H(u), and I(u; z)\hfill \break \linebreak
+  \includegraphics[width=10cm,height=1cm]{2.3.3}
 
 \section*{Considerations and remarks}
 1) How many secret message bits per channel use ("transmitted word") have you obtained with yourscheme?How many secret bits per binary digit ("transmitted bit")?  \hfill \break \linebreak
@@ -109,7 +113,6 @@ Since Eve cannot know which bits are flipped, we suppose that Eve has to choose 
 \section*{Task 5}
 In task 5 we are using NumPy, bitstring, utils for string to array and array to string, math, matplotlib for plot and statistics libraries for better implementation and we import the task2 and task3 to connected in between the random binning encoder developed in Task 2, and the decoder
 developed in Task 3, for test with task 2/3 encoder decoder we defined deltas as np.arange(0, 1.1, 0.1), epsilon  as 0.1, wrong\_eves to store number of wrong codewords decoded by eve in percentage, wrong\_bobs to store number of wrong codewords decoded by bob in percentage, codeword\_error\_eve for \% of wrong bits in the codeword received by eve after we compute the channel capacity then we defined     multi\_error\_codeword\_count to count how many pairs of codewords (x, y)have more than 1 bit different, error\_bob\_count for wrong codewords decoded by bob and this is not the same as multi\_error\_codeword\_count, because the complementary (+- 1 bit) of the codewords are decoded correctly, error\_eve\_count for wrong codewords decoded by eve and codeword\_error\_eve\_cycle to count how many flipped bits are in the codeword received by eve at each cycle after that repeat multiple times for better estimates then compare decode with input.\hfill \break \linebreak
-
 Task 5 is a binary symmetric channel that flips bits in bob and eve channels with probability epsilon and delta. The bits to flip are chosen uniformly in the input with a simple random generation of 0 and 1, where 1 means that a flip will occur in that position. This mask is applied with a XOR.
 The channel is tested first with a long string of bits and the number of flipped bits equals in percentage the values provided for epsilon and delta.
 Then the full range of inputs for the encoder and decoder of task 2 and 3 is tested multiple times and the results are averaged for better accuracy.
@@ -121,7 +124,8 @@ Two plots are provided at the end to show these results, by enabling the corresp
 
 \section*{Task 6}
 
-Here in task 6 for Evaluate the system security over the wiretap BSC we use the values\_e variable for \textepsilon \space and values\_d for \textdelta \space then Repeating task 3 and computing reliability of Bob 
+Here in task 6 for Evaluate the system security over the wiretap BSC we use the values\_e variable for \textepsilon \space and values\_d for \textdelta \space then Repeating task 3 and computing reliability of Bob \hfill \break \linebreak
+\includegraphics[width=10cm,height=7cm]{9}
 
 
 \end{document}
