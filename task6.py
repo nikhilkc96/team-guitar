@@ -57,7 +57,6 @@ if __name__ == "__main__":
         
             #Sort the dictionary in order to plot it
             z_dict = dict(sorted(Counter(z_results).items()))
-            print(z_dict)
             z_pmds.append(z_dict)
       
         matrix = np.empty((0, 128), float)
