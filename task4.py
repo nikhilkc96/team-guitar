@@ -29,11 +29,20 @@ if __name__ == "__main__":
         z_pmds.append(z_dict)
 
     #Plot the PMDs
+    # for i in range(0, len(inputs)):
+    #     plt.plot(list(z_pmds[i].keys()), list(x / n for x in z_pmds[i].values()))
+    # plt.xlabel('Number')
+    # plt.ylabel('Probability')
+    # plt.suptitle('Simulation of Eavesdropper channel')
+    # plt.show()
+    fig, axs = plt.subplots(math.ceil(len(inputs)/4), 4)
     for i in range(0, len(inputs)):
-        plt.plot(list(z_pmds[i].keys()), list(x / n for x in z_pmds[i].values()))
-    plt.xlabel('Number')
-    plt.ylabel('Probability')
-    plt.suptitle('Simulation of Eavesdropper channel')
+        axs[i//4, i%4].plot(list(z_pmds[i].keys()), list(x / n for x in z_pmds[i].values()))
+        axs[i//4, i%4].set(xlabel='Number')
+        axs[i//4, i%4].set_title('Input ' + str(inputs[i]))
+        if (i%4 == 0):
+            axs[i//4, i%4].set(ylabel='Probability') # only for first column or it overlaps
+    fig.suptitle('Simulation of Eavesdropper channel')
     plt.show()
 
     matrix = np.empty((0, 128), float)
